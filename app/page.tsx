@@ -21,7 +21,7 @@ export default function Home() {
               <button className="cta-button">MAKE AN APPOINTMENT</button>
             </a>
 
-            <a href="https://vusi-kunene-matlou.github.io/" target="_blank">
+            <a href="/download-app" target="_blank">
               <button className="cta-button">Download our APP</button>
             </a>
           </div>

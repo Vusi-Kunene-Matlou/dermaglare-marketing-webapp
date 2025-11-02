@@ -122,12 +122,12 @@ export default function Header() {
               </ul>
             </li>
             <li>
-              <Link href="/https://vusi-kunene-matlou.github.io/" className="nav-link" onClick={() => setIsMenuOpen(false)}>
+              <Link href="https://vusi-kunene-matlou.github.io/" className="nav-link" onClick={() => setIsMenuOpen(false)}>
                 BOOK APPOINTMENT
               </Link>
             </li>
             <li>
-              <Link href="https://vusi-kunene-matlou.github.io/" className="nav-link" onClick={() => setIsMenuOpen(false)}>
+             <Link href="/download-app" className="nav-link" onClick={() => setIsMenuOpen(false)}>
                 DOWNLOAD OUR APP
               </Link>
             </li>
