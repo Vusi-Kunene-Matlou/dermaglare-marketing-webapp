@@ -71,7 +71,7 @@ export default function DownloadAppPage() {
                   </a>
 
                   <a 
-                    href="https://vusi-kunene-matlou.github.io/" 
+                    href="https://drive.google.com/file/d/1JV-p3plAcxiVqLKzWKQNzNtlb58QBndg/view?usp=sharing" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="store-btn store-btn-apple"

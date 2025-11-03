@@ -122,7 +122,7 @@ export default function Header() {
               </ul>
             </li>
             <li>
-              <Link href="https://vusi-kunene-matlou.github.io/" className="nav-link" onClick={() => setIsMenuOpen(false)}>
+              <Link href="https://dermaglare-patient-portal.vercel.app" className="nav-link" onClick={() => setIsMenuOpen(false)}>
                 BOOK APPOINTMENT
               </Link>
             </li>
