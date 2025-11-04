@@ -12,8 +12,7 @@ interface ServicePageProps {
   description: string;
   sections: ServiceSection[];
   features?: string[];
-  ctaText?: string;
-  ctaLink?: string;
+  // CTA props removed
 }
 
 export default function ServicePageTemplate({
@@ -22,8 +21,7 @@ export default function ServicePageTemplate({
   description,
   sections,
   features,
-  ctaText = "Book Your Consultation",
-  ctaLink = "/contact"
+  // Default values for ctaText and ctaLink removed
 }: ServicePageProps) {
   return (
     <main className="service-page">
@@ -77,12 +75,14 @@ export default function ServicePageTemplate({
             </div>
           )}
 
-          {/* CTA Button */}
-          <div className="service-cta">
+          {/* CTA Button - REMOVED */}
+          {/* <div className="service-cta">
             <Link href={ctaLink}>
               <button className="service-cta-button">{ctaText}</button>
             </Link>
-          </div>
+          </div> 
+          */}
+          
         </div>
       </section>
 
