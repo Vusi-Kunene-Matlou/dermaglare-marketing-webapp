@@ -16,11 +16,16 @@ export default function Header() {
     setIsServicesOpen(!isServicesOpen);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    setIsServicesOpen(false);
+  };
+
   return (
     <header className="site-header">
       <div className="header-container">
         <div className="logo">
-          <Link href="/">
+          <Link href="/" onClick={closeMenu}>
             <div className="logo-text">
               <img src="/images/logo.png" alt="Dermaglare Logo" className="hero-img" />
             </div>
@@ -30,12 +35,12 @@ export default function Header() {
         <nav className={`main-nav ${isMenuOpen ? 'active' : ''}`}>
           <ul className="nav-list">
             <li>
-              <Link href="/" className="nav-link" onClick={() => setIsMenuOpen(false)}>
+              <Link href="/" className="nav-link" onClick={closeMenu}>
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/about" className="nav-link" onClick={() => setIsMenuOpen(false)}>
+              <Link href="/about" className="nav-link" onClick={closeMenu}>
                 About
               </Link>
             </li>
@@ -51,89 +56,93 @@ export default function Header() {
               </button>
               <ul className="dropdown-menu">
                 <li>
-                  <Link href="/services/paediatric" onClick={() => setIsMenuOpen(false)}>
+                  <Link href="/services/paediatric" onClick={closeMenu}>
                     Paediatric Dermatology
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services/medical" onClick={() => setIsMenuOpen(false)}>
+                  <Link href="/services/medical" onClick={closeMenu}>
                     Medical Dermatology
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services/surgical" onClick={() => setIsMenuOpen(false)}>
+                  <Link href="/services/surgical" onClick={closeMenu}>
                     Surgical Dermatology
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services/cosmetic" onClick={() => setIsMenuOpen(false)}>
+                  <Link href="/services/cosmetic" onClick={closeMenu}>
                     Cosmetic Dermatology
                   </Link>
                 </li>
-                
                 <li>
-                  <Link href="/services/medical" onClick={() => setIsMenuOpen(false)}>
-                    Medical Dermatology
+                  <Link href="/services/botox" onClick={closeMenu}>
+                    Botox Injections
                   </Link>
                 </li>
-
                 <li>
-                  <Link href="/services/botox" onClick={() => setIsMenuOpen(false)}>
-                    Botox
-                  </Link>
-                </li>
-
-                <li>
-                  <Link href="/services/peeling" onClick={() => setIsMenuOpen(false)}>
+                  <Link href="/services/peeling" onClick={closeMenu}>
                     Medical Peeling
                   </Link>
                 </li>
-
                 <li>
-                  <Link href="/services/skin-tightening" onClick={() => setIsMenuOpen(false)}>
+                  <Link href="/services/skin-tightening" onClick={closeMenu}>
                     Skin Tightening
                   </Link>
                 </li>
-
                 <li>
-                  <Link href="/services/micro-needling" onClick={() => setIsMenuOpen(false)}>
+                  <Link href="/services/micro-needling" onClick={closeMenu}>
                     Micro-needling 
                   </Link>
                 </li>
-
                 <li>
-                  <Link href="/services/prp " onClick={() => setIsMenuOpen(false)}>
+                  <Link href="/services/prp" onClick={closeMenu}>
                     Platelet-Rich Plasma 
                   </Link>
                 </li>
-
                 <li>
-                  <Link href="/services/electrocautery " onClick={() => setIsMenuOpen(false)}>
+                  <Link href="/services/electrocautery" onClick={closeMenu}>
                     Electrocautery & Curettage 
                   </Link>
                 </li>
-
                 <li>
-                  <Link href="/services/cryosurgery " onClick={() => setIsMenuOpen(false)}>
+                  <Link href="/services/cryosurgery" onClick={closeMenu}>
                     Cryosurgery
                   </Link>
                 </li>
-
               </ul>
             </li>
             <li>
-              <Link href="https://dermaglare-patient-portal.vercel.app" className="nav-link" onClick={() => setIsMenuOpen(false)}>
-                BOOK APPOINTMENT
+              <Link href="https://dermaglare-patient-portal.vercel.app" className="nav-link" onClick={closeMenu}>
+                Book Appointment
               </Link>
             </li>
             <li>
-             <Link href="/download-app" className="nav-link" onClick={() => setIsMenuOpen(false)}>
-                DOWNLOAD OUR APP
+              <Link href="/download-app" className="nav-link" onClick={closeMenu}>
+                Download Our App
               </Link>
             </li>
           </ul>
         </nav>
 
+        {/* Mobile Menu Toggle Button - THIS WAS MISSING! */}
+        <div className="header-actions">
+          <button 
+            className={`mobile-menu-toggle ${isMenuOpen ? 'active' : ''}`}
+            onClick={toggleMenu}
+            aria-label="Toggle menu"
+            aria-expanded={isMenuOpen}
+          >
+            <span className="hamburger-line"></span>
+            <span className="hamburger-line"></span>
+            <span className="hamburger-line"></span>
+          </button>
+        </div>
+
+        {/* Overlay for mobile menu */}
+        {isMenuOpen && (
+          <div className="menu-overlay" onClick={closeMenu}></div>
+        )}
       </div>
     </header>
   );

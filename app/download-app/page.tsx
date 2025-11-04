@@ -56,7 +56,7 @@ export default function DownloadAppPage() {
                   
 
                   <a 
-                    href="https://vusi-kunene-matlou.github.io/" 
+                    href="https://drive.google.com/file/d/1Pq87nLJqTgMR02rzNaOzMXQ6iZQhE2as/view?usp=sharing" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="store-btn store-btn-google"
@@ -275,7 +275,7 @@ export default function DownloadAppPage() {
             Join thousands of patients already using Dermaglare Skin App
           </p>
           <div className="cta-buttons">
-            <a href="https://vusi-kunene-matlou.github.io/" className="cta-btn cta-btn-primary">
+            <a href="https://drive.google.com/file/d/1Pq87nLJqTgMR02rzNaOzMXQ6iZQhE2as/view?usp=sharing" className="cta-btn cta-btn-primary">
               Download App
             </a>
            
