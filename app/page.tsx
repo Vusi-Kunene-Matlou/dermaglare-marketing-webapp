@@ -17,7 +17,7 @@ export default function Home() {
             <p className="hero-description">
               Specialist Dermatologist - Dr Jabu Nkehli
             </p>
-            <a href="https://dermaglare-patient-portal.vercel.app" target="_blank">
+            <a href="https://patient-portal-snowy.vercel.app" target="_blank">
               <button className="cta-button">MAKE AN APPOINTMENT</button>
             </a>
 

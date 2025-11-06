@@ -113,7 +113,7 @@ export default function Header() {
               </ul>
             </li>
             <li>
-              <Link href="https://dermaglare-patient-portal.vercel.app" className="nav-link" onClick={closeMenu}>
+              <Link href="https://patient-portal-snowy.vercel.app" className="nav-link" onClick={closeMenu}>
                 Book Appointment
               </Link>
             </li>
